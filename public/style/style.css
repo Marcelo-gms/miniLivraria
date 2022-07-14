@@ -1,13 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Luxurious+Roman&family=Mulish:ital,wght@0,200;0,300;1,200;1,300&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Luxurious+Roman&family=Mulish:ital,wght@0,200;0,300;1,200;1,300&family=Poppins:ital,wght@0,200;1,200&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Luxurious+Roman&family=Mulish:ital,wght@0,200;0,300;1,200;1,300&family=Poppins:wght@200&family=Urbanist:wght@200&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lora:ital@1&family=Luxurious+Roman&family=Mulish:ital,wght@0,200;0,300;1,200;1,300&family=Poppins:wght@200&family=Urbanist:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Dancing+Script:wght@500&family=Edu+TAS+Beginner&family=Lora:ital@1&family=Luxurious+Roman&family=Mulish:ital,wght@0,200;0,300;1,200;1,300&family=Poppins:wght@200&family=Urbanist:wght@200&display=swap");
 
 :root {
-  --font-textos: Luxurious, sans-serif;
-  --font-botoes: Poppins, sans-serif;
-  --font-3: Urbanist, sans-serif;
-  --font-4: Lora, sans-serif;
+  --font-logo2: Caveat;
+  --font-4: Lora;
 }
 
 * {
@@ -17,14 +13,15 @@
 }
 
 body {
-  background-color: #f4fcd9;
+  background-color: #00e0c6;
   overflow-x: hidden;
   max-width: 1090px;
   margin: 0 auto;
+  position: relative;
 }
 
 .container-menu {
-  background-color: #f0a500;
+  background-color: #009393;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -38,8 +35,8 @@ body {
 
 .logo h2 {
   margin: 0.5rem 1rem;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: 200;
+  color: #ffffff;
+  font-family: var(--font-logo2);
 }
 .nav-desktop {
   width: 50%;
@@ -51,12 +48,12 @@ body {
   text-align: center;
 }
 .nav-link {
-  color: #1b1a17;
+  color: #ffffff;
   text-decoration: none;
   font-size: 1.5rem;
 }
 .nav-link:hover {
-  color: rgba(192, 17, 17, 0.5);
+  color: rgba(0, 17, 17, 0.5);
 }
 .wallpaper {
   width: 100%;
@@ -85,9 +82,8 @@ body {
   width: 50%;
   padding: 0 1.5rem;
 }
-.text1 p{
+.text1 p {
   margin-bottom: 2rem;
-  
 }
 .text1,
 .text2 p {
@@ -96,7 +92,6 @@ body {
   line-height: 2rem;
   font-size: 1.5rem;
   font-family: var(--font-4);
- 
 }
 
 .text-header p:hover {
@@ -113,6 +108,7 @@ body {
 .principal {
   width: 100%;
   height: 100%;
+  position: relative;
 }
 
 .container-produto {
@@ -120,7 +116,7 @@ body {
   display: flex;
   border-radius: 0.4rem;
   margin: 1rem 0;
-  background-color: #e45826;
+  background-color: #016170;
 }
 
 .box-img {
@@ -135,13 +131,13 @@ body {
 }
 
 .box-img img:hover {
-  animation: zoom 0.2s forwards;
+  transform: scale(1.1);
 }
 
 .titulo h2 {
   width: 100%;
   text-align: center;
-  color: #e2aed9;
+  color: #ffffff;
 }
 
 .btn-detalhes {
@@ -159,17 +155,17 @@ body {
 
 .info-produtos p {
   font-size: 1.3rem;
-  color: #1b1a17;
+  color: #050505a4;
   margin-bottom: 1rem;
   line-height: 2rem;
-  font-family: var(--font-textos);
+  font-family: var(--font-4);
 }
 .compra {
   width: 20%;
   height: 50%;
   padding: 0.6rem;
 }
-.preco{
+.preco {
   width: 100%;
   margin: 2rem 0;
 }
@@ -177,8 +173,7 @@ body {
 .preco h3 {
   text-align: center;
   font-size: 1.5rem;
-  color: gold;
-
+  color: #f0a500;
 }
 
 .btn-comprar {
@@ -192,7 +187,7 @@ body {
   border: none;
   border-radius: 0.4rem;
   cursor: pointer;
-  animation: animationButton 2s forwards ease-in-out alternate infinite;
+  animation: animationButton 3s forwards ease-in-out alternate infinite;
 }
 
 .btn-comprar button a {
@@ -202,13 +197,27 @@ body {
   font-size: 1.2rem;
 }
 
-/* STILO DAS SESSOES DE CONTATO E SOBRE */
+.btn-topo {
+  position: absolute;
+  right: 1.5rem;
+  bottom: 4rem;
+  z-index: 3;
+  background-color: #2ec50f;
+  border-radius: 50%;
+  animation: animationBtnTopo .6s  ease-in alternate infinite;
+}
+
+.btn-topo i {
+  color: #1b1a17;
+  color: #ffffff;
+  padding: 0.6rem;
+}
 
 .roda-pe {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  background-color: #f0a500;
+  background-color: #009393;
 }
 .roda-pe {
   font-size: 1rem;
@@ -218,6 +227,11 @@ body {
   font-size: 1.3rem;
   padding: 0.3rem;
   text-align: center;
+  color: #ffffff;
+}
+
+.roda-pe p a {
+  color: #ffffff;
 }
 
 .contato {
@@ -235,7 +249,7 @@ body {
 .icon-contato a i {
   font-size: 1.7rem;
   text-decoration: none;
-  color: #1b1a17;
+  color: #ffffff;
 }
 
 .icon-contato a i:hover {
@@ -267,7 +281,7 @@ body {
   }
   .hamburguer i {
     font-size: 1.5rem;
-    color: #1b1a17;
+    color: #ffffff;
   }
 
   .nav-list {
@@ -277,7 +291,7 @@ body {
     position: absolute;
     top: 2.6rem;
     left: 0;
-    background: linear-gradient(120deg, #f0a500, #e45826);
+    background-color: #016170;
     transition: 1s ease;
     opacity: 0;
   }
@@ -293,7 +307,6 @@ body {
     margin: 0.7rem auto;
     padding: 0.5rem;
     border-radius: 0.7rem;
-    background-color: #e45826;
   }
 
   .nav-link {
@@ -301,14 +314,9 @@ body {
   }
 
   .nav-item:hover {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: gold;
+    background-color: rgba(233, 220, 220, 0.5);
     transform: scale(1.1);
   }
-  .nav-link:hover {
-    color: rgba(0, 0, 0, 0.5);
-  }
-
   .icones-redes {
     width: 50%;
     height: 100%;
@@ -319,7 +327,7 @@ body {
 
   .icones-redes i {
     margin: 0.5rem 1rem;
-    color: #e2aed9;
+    color: #ffffff;
     font-size: 1.8rem;
   }
 
@@ -327,7 +335,7 @@ body {
     color: rgba(0, 0, 0, 0.5);
   }
   .principal {
-    padding: .6rem 0.5rem 0  0.5rem;
+    padding: 0.6rem 0.5rem 0 0.5rem;
   }
 
   .container-produto {
@@ -341,12 +349,8 @@ body {
   .box-img img {
     width: 50%;
     margin: 0 auto;
+    transition: 1s;
   }
-
-  .box-img img:hover {
-    transform: scale(1.1);
-  }
-
   .btn-detalhes {
     width: 100%;
     display: block;
@@ -354,10 +358,17 @@ body {
   .btn-detalhes button {
     width: 50%;
     padding: 0.5rem;
-    background-color: #f03800;
+    background-color: #f0a500;
+    color: #ffffff;
+    font-size: 0.9rem;
     border: none;
     border-radius: 0.4rem;
     cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .btn-detalhes button.x {
+    background-color: #f01c007c;
   }
 
   .info-produtos {
@@ -365,7 +376,8 @@ body {
     display: none;
   }
   .info-produtos p {
-    line-height: 1.2rem;
+    line-height: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
   }
 
   .info-produtos h2 {
@@ -383,7 +395,6 @@ body {
   }
   .preco {
     width: 50%;
-   
   }
   .btn-comprar {
     width: 50%;
@@ -393,8 +404,18 @@ body {
     width: 80%;
     margin: 0 auto;
   }
-  .btn-comprar button a{
+  .btn-comprar button a {
     font-size: 1rem;
+  }
+
+  .btn-topo{
+    right: 1rem;
+    bottom: 2.5rem;
+  }
+
+  .btn-topo i{
+    font-size: 1.2rem;
+    padding: .5rem;
   }
 
   .roda-pe {
@@ -412,7 +433,29 @@ body {
   }
 }
 
+@media screen and (max-width: 434px){
+  .btn-topo{
+    right: .5rem;
+    bottom: 3.9rem;
+  }
+  .btn-topo i{
+    font-size: 1rem;
+    padding: .4rem;
+  }
+
+}
+
 @media screen and (max-width: 390px) {
+
+  .btn-topo{
+    right: .5rem;
+    bottom: 2.2rem;
+  }
+
+  .btn-topo i{
+    font-size: 1rem;
+    padding: .4rem;
+  }
   .icones-redes i {
     font-size: 1.5rem;
   }
@@ -449,5 +492,10 @@ body {
   }
   100% {
     transform: translateY(-0.3rem);
+  }
+}
+@keyframes animationBtnTopo {
+  100% {
+    transform: translateY(-.5rem);
   }
 }
